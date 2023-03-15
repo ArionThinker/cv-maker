@@ -1,0 +1,165 @@
+<div class="container my-5">
+    {% if cv_info %}
+    {{ cv_info|json_encode }}
+    <div class="container-fluid p-0 bg-dark">
+        <div class="row">
+            <div class="col-5 col-lg-4 h-100">
+                <div class="bg-dark text-light p-5 h-100">
+                    <h3>{{ cv_info.personal.firstname }} {{ cv_info.personal.lastname }}</h3>
+                    <p class="lead fs-6">{{ cv_info.personal.profession }}</p>
+                    <img src="./example.jpg" alt="" class="w-75 h-auto rounded-circle mb-3 mx-auto d-block">
+
+                    <h4>Personal info</h4>
+
+                    <ul class="list-unstyled">
+                        {% if cv_info.contact.email %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-envelope"></i></div>
+                                <div>
+                                    <strong>E-mail</strong>
+                                    <p class="m-0"><a href="mailto:ryabchenko.andrew@gmail.com" class="nav-link">{{ cv_info.contact.email }}</a></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.telephone %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-telephone"></i></div>
+                                <div>
+                                    <strong>Telephone</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.telephone }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.website %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-link-45deg"></i></div>
+                                <div>
+                                    <strong>Website</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.website }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.linkedin %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-linkedin"></i></div>
+                                <div>
+                                    <strong>Linkedin</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.linkedin }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.github %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-github"></i></div>
+                                <div>
+                                    <strong>GitHub</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.github }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.behance %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-behance"></i></div>
+                                <div>
+                                    <strong>Behance</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.behance }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.twitter %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-twitter"></i></div>
+                                <div>
+                                    <strong>Twitter</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.twitter }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.facebook %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-facebook"></i></div>
+                                <div>
+                                    <strong>Facebook</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.facebook }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.instagram %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-instagram"></i></div>
+                                <div>
+                                    <strong>Instagram</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.instagram }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.pinterest %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-pinterest"></i></div>
+                                <div>
+                                    <strong>Pinterest</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.pinterest }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if cv_info.contact.telegram %}
+                            <li class="d-flex align-items-center gap-3 mb-3">
+                                <div class="fs-3"><i class="bi bi-telegram"></i></div>
+                                <div>
+                                    <strong>Telegram</strong>
+                                    <p class="m-0"><span class="nav-link">{{ cv_info.contact.telegram }}</span></p>
+                                </div>
+                            </li>
+                        {% endif %}
+                    </ul>
+                    <hr>
+                    <h4>Skills</h4>
+                    <ul class="list-unstyled">
+                        {% for skill in cv_info.skills %}
+                        <li class="mb-3">
+                            <span>{{ skill.name }}</span>
+                            <div class="progress mt-2" role="progressbar" aria-label="Success example" aria-valuenow="{{ skill.range }}" aria-valuemin="0" aria-valuemax="100" style="background: #393e43;height:5px">
+                                <div class="progress-bar bg-light" style="width: {{ skill.range }}%"></div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-7 col-lg-8 py-3 px-5 bg-light">
+                <h4>Work History</h4>
+                <hr>
+                {% for work in cv_info.works %}
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <span class="text-muted">{{ work.start }} - {{ work.end ?  work.end : 'NOW' }}</span>
+                        </div>
+                        <div class="col-10">
+                            <h6>{{ work.position }}</h6>
+                            <i>{{ work.company }} {{ work.location ? '(' ~ work.location ~ ')' : '' }}</i>
+                            <p>{{ work.about }}</p>
+                            {% if work.skills %}
+                                <strong>Skills: </strong><span>{{ work.skills }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+                
+
+                <h4>Education</h4>
+                <hr>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <span class="text-muted">10.2013 - 11.2017</span>
+                    </div>
+                    <div class="col-10">
+                        <h6>University of Pennsylvania</h6>
+                        <i>(BA, BS)</i>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>

@@ -1,0 +1,324 @@
+<div class="container my-5">
+    <h1>{{ h1_creator }}</h1>
+    <form method="post" action="/system/add_cv.php">
+        <div class="row mt-5">
+            <div class="col-12">
+                <p class="lead">{{ text_personal_information }}</p>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="input-firstname" placeholder="{{ entry_firstname }}" name="personal[firstname]">
+                    <label for="input-firstname">{{ entry_firstname }}</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="input-lastname" placeholder="{{ entry_lastname }}" name="personal[lastname]">
+                    <label for="input-lastname">{{ entry_lastname }}</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="input-birthdate" placeholder="{{ entry_birthdate }}" name="personal[birthdate]">
+                    <label for="input-birthdate">{{ entry_birthdate }}</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="input-profession" placeholder="{{ entry_profession }}" name="personal[profession]">
+                    <label for="input-profession">{{ entry_profession }}</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="input-country" placeholder="{{ entry_country }}" name="personal[country]">
+                    <label for="input-country">{{ entry_country }}</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="input-city" placeholder="{{ entry_city }}" name="personal[city]">
+                    <label for="input-city">{{ entry_city }}</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <p class="lead">{{ text_contact_information }}</p>
+                <hr>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="email" class="form-control" id="input-email" placeholder="{{ entry_email }}" name="contact[email]">
+                        <label for="input-email">{{ entry_email }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="tel" class="form-control" id="input-telephone" placeholder="{{ entry_telephone }}" name="contact[telephone]">
+                        <label for="input-telephone">{{ entry_telephone }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-link-45deg"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="url" class="form-control" id="input-website" placeholder="{{ entry_website }}" name="contact[website]">
+                        <label for="input-website">{{ entry_website }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-linkedin"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="input-linkedin" placeholder="{{ entry_linkedin }}" name="contact[linkedin]">
+                        <label for="input-linkedin">{{ entry_linkedin }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-github"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="input-github" placeholder="{{ entry_github }}" name="contact[github]">
+                        <label for="input-github">{{ entry_github }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-behance"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="input-behance" placeholder="{{ entry_behance }}" name="contact[behance]">
+                        <label for="input-behance">{{ entry_behance }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="input-twitter" placeholder="{{ entry_twitter }}" name="contact[twitter]">
+                        <label for="input-twitter">{{ entry_twitter }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-facebook"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="input-facebook" placeholder="{{ entry_facebook }}" name="contact[facebook]">
+                        <label for="input-facebook">{{ entry_facebook }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="input-instagram" placeholder="{{ entry_instagram }}" name="contact[instagram]">
+                        <label for="input-instagram">{{ entry_instagram }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-pinterest"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="input-pinterest" placeholder="{{ entry_pinterest }}" name="contact[pinterest]">
+                        <label for="input-pinterest">{{ entry_pinterest }}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex gap-3">
+                    <div class="d-flex fs-3 mb-3 align-items-center justify-content-center">
+                        <div>
+                        <i class="bi bi-telegram"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="input-telegram" placeholder="{{ entry_telegram }}" name="contact[telegram]">
+                        <label for="input-telegram">{{ entry_telegram }}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-12">
+                <p class="lead">{{ text_skills }}</p>
+                <hr>
+            </div>
+            <div class="col-12">
+                <div id="skills">
+
+                </div>
+                <button type="button" class="btn btn-outline-dark" onclick="addSkill()"><i class="bi bi-plus-lg"></i> {{ button_add_skill }}</button>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-12">
+                <p class="lead">{{ text_works }}</p>
+                <hr>
+            </div>
+            <div class="col-12">
+                <div id="works">
+
+                </div>
+                <button type="button" class="btn btn-outline-dark" onclick="addWork()"><i class="bi bi-plus-lg"></i> {{ button_add_work }}</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-5 text-center">
+                <button class="btn btn-dark btn-lg px-5" type="submit"><i class="bi bi-cloud-download"></i> {{ button_save }}</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    var skill_row = 0;
+    var work_row = 0;
+
+    function addSkill() {
+        html = '';
+        html += '<div id="skill' + skill_row + '">';
+        html += '   <div class="row align-items-center">';
+        html += '       <div class="col-5">';
+        html += '           <div class="form-floating mb-3">';
+        html += '               <input type="text" class="form-control" id="input-skill-name-' + skill_row + '" placeholder="{{ entry_skill_name }}" name="skills[' + skill_row + '][name]">';
+        html += '               <label for="input-skill-name-' + skill_row + '">{{ entry_skill_name }}</label>';
+        html += '           </div>';
+        html += '       </div>';
+        html += '       <div class="col-5">';
+        html += '           <label for="input-skill-range-' + skill_row + '" class="form-label">{{ entry_skill_range }} (<span>50%</span>)</label>';
+        html += '           <input type="range" class="form-range" min="0" max="100" step="1" id="input-skill-range-' + skill_row + '" name="skills[' + skill_row + '][range]">';
+        html += '       </div>';
+        html += '       <div class="col-2">';
+        html += '           <button class="btn text-danger" type="button" onclick="$(\'#skill' + skill_row + '\').remove()"><i class="bi bi-trash3"></i></button>';
+        html += '       </div>';
+        html += '   </>';
+        html += '</div>';
+
+        $('#skills').append(html);
+
+        skill_row++;
+
+        $('input[type="range"]').change(function() {
+            $(this).parent().find('label > span').text($(this).val() + '%')
+        });
+    }
+
+    function addWork() {
+        html = '';
+        html += '<div id="work' + work_row + '" class="card mb-3">';
+        html += '   <div class="row card-body">';
+        html += '       <div class="col-12 text-end">';
+        html += '           <button class="btn text-danger mb-3" type="button" onclick="$(\'#work' + work_row + '\').remove()"><i class="bi bi-trash3"></i> {{ button_work_remove }}</button>';
+        html += '       </div>';
+        html += '       <div class="col-12 col-md-4">';
+        html += '           <div class="form-floating mb-3">';
+        html += '               <input type="text" class="form-control" id="input-work-position-' + work_row + '" placeholder="{{ entry_work_position }}" name="works[' + work_row + '][position]">';
+        html += '               <label for="input-work-position-' + work_row + '">{{ entry_work_position }}</label>';
+        html += '           </div>';
+        html += '       </div>';
+        html += '       <div class="col-12 col-md-4">';
+        html += '           <div class="form-floating mb-3">';
+        html += '               <input type="text" class="form-control" id="input-work-company-' + work_row + '" placeholder="{{ entry_work_company }}" name="works[' + work_row + '][company]">';
+        html += '               <label for="input-work-company-' + work_row + '">{{ entry_work_company }}</label>';
+        html += '           </div>';
+        html += '       </div>';
+        html += '       <div class="col-12 col-md-4">';
+        html += '           <div class="form-floating mb-3">';
+        html += '               <input type="text" class="form-control" id="input-work-location-' + work_row + '" placeholder="{{ entry_work_location }}" name="works[' + work_row + '][location]">';
+        html += '               <label for="input-work-location-' + work_row + '">{{ entry_work_location }}</label>';
+        html += '           </div>';
+        html += '       </div>';
+        html += '       <div class="col-12 col-md-4">';
+        html += '           <div class="form-floating mb-3">';
+        html += '               <input type="month" class="form-control" id="input-work-start-' + work_row + '" placeholder="{{ entry_work_start }}" name="works[' + work_row + '][start]">';
+        html += '               <label for="input-work-start-' + work_row + '">{{ entry_work_start }}</label>';
+        html += '           </div>';
+        html += '       </div>';
+        html += '       <div class="col-12 col-md-4">';
+        html += '           <div class="form-floating mb-3">';
+        html += '               <input type="month" class="form-control" id="input-work-end-' + work_row + '" placeholder="{{ entry_work_end }}" name="works[' + work_row + '][end]">';
+        html += '               <label for="input-work-end-' + work_row + '">{{ entry_work_end }}</label>';
+        html += '           </div>';
+        html += '       </div>';
+        html += '       <div class="col-12 col-md-4">';
+        html += '           <div class="form-floating mb-3">';
+        html += '               <input type="text" class="form-control" id="input-work-skills-' + work_row + '" placeholder="{{ entry_work_skills }}" name="works[' + work_row + '][skills]">';
+        html += '               <label for="input-work-skills-' + work_row + '">{{ entry_work_skills }}</label>';
+        html += '           </div>';
+        html += '       </div>';
+        html += '       <div class="col-12">';
+        html += '           <div class="form-floating mb-3">';
+        html += '               <textarea class="form-control" placeholder="{{ entry_work_about }}" id="input-work-skills-' + work_row + '" name="works[' + work_row + '][about]" style="height: 100px"></textarea>';
+        html += '               <label for="input-work-skills-' + work_row + '">{{ entry_work_about }}</label>';
+        html += '           </div>';
+        html += '       </div>';
+        html += '   </div>';
+        html += '</div>';
+
+        $('#works').append(html);
+
+        work_row++;
+    }
+    
+    
+</script>
